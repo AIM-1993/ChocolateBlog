@@ -1,0 +1,7 @@
+env-py3.7-django2.1.2/*
+.vscode
+settings.py
+__pycache__
+manage.py
+migrations
+db.sqlite3
