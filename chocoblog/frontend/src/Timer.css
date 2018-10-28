@@ -1,0 +1,13 @@
+
+.Timer {
+  text-align:left;
+}
+
+.Timer-header {
+  background-color: #5c9fd8;
+  min-height: 10vh;
+  display: inline;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: ;
+}
