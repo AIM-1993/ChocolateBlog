@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Clock from './Timer';
 import Table from './Table';
+import SiteRouter from './SiteRouter';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Clock />, document.getElementById('timer'));

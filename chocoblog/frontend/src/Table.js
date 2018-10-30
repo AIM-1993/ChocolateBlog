@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Table.css';
+import text from './text.json';
 class Table extends React.Component {
+
   render() {
     return (
-    <div className="container">
+    <div className="container table-responsive">
       <table className="table table-hover table-dark">
         <thead className="bg-color">
           <tr>
@@ -17,9 +19,9 @@ class Table extends React.Component {
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{text.hello}</td>
+            <td>{text.happy}</td>
+            <td>后端数据</td>
           </tr>
         </tbody>
       </table>
