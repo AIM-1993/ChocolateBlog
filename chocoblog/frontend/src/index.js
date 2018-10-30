@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Clock from './Timer';
+// import './main.css';
 import Table from './Table';
-import SiteRouter from './SiteRouter';
+import Clock from './Timer';
+// import Record from './Record';
+import TodoList from './TodoList';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Clock />, document.getElementById('timer'));
+
+// ReactDOM.render(<Clock />, document.getElementById('timer'));
 ReactDOM.render(<Table />, document.getElementById('table'));
-
-
+// ReactDOM.render(<Record />, document.getElementById('record'));
+// ReactDOM.render(<TodoList />, document.getElementById('todolist'));
+// ReactDOM.render(<Record />, document.getElementById('record'));
 
 
 // If you want your app to work offline and load faster, you can change

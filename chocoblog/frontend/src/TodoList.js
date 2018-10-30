@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ListItem from './ListItem';
 import Dialog from './dialog';
-import './Table.css';
-import text from './text.json';
 
-class Table extends Component {
+
+class TodoList extends Component {
     constructor (props) {
         super(props);
 
@@ -57,35 +55,25 @@ class Table extends Component {
         });
     }
 
-  render() {
-    const item = {item};
-    return (
-      <div className="container table-responsive">
-        <h1>TodoList</h1>
-        <table className="table table-hover table-dark">
-          <thead className="bg-color">
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Things</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody className="no-underline">
-                { this.state.list.map ((item, index) =>
-                  <ListItem
-                      key={index}
-                      finishedChange={this.updateFinished.bind(this)}
-                      totalChange={this.updateTotal.bind(this)}
-                      item={item}
-                  />
-                )}
-          </tbody>
-        </table>
-        <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
-      </div>
-
-
-  );
-  }
+    render () {
+        return (
+            <div className="container">
+                <h1>TodoList</h1>
+                <ul>
+                    { this.state.list.map ((item, index) =>
+                        <ListItem
+                            item={item}
+                            finishedChange={this.updateFinished.bind(this)}
+                            totalChange={this.updateTotal.bind(this)}
+                            key={index}
+                        />
+                    )}
+                    <li>{this.state.finished}已完成&nbsp;/&nbsp;{this.state.list.length}总数</li>
+                </ul>
+                <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
+            </div>
+        );
+    }
 }
-export default Table;
+
+export default TodoList;
