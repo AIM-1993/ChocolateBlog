@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import ListItem from './ListItem';
 import Dialog from './dialog';
 import './table.css';
@@ -23,21 +22,7 @@ class Table extends Component {
             list: allTask
         });
     }
-    //更新完成的任务，在组件中以props的形式传递给子组件
-    updateFinished (todoItem) {
-        var sum = 0;
-        this.state.list.forEach( (item) => {
-            if (item.id === todoItem.id) {
-                item.status = todoItem.status;
-            }
-            if (item.status === 1) {
-                sum++;
-            }
-        });
-        this.setState({
-            finished: sum
-        });
-    }
+
 
     //更新任务总数，在组件中以props的形式传递给子组件
     updateTotal (todoItem) {
@@ -57,7 +42,6 @@ class Table extends Component {
     }
 
   render() {
-    const item = {item};
     return (
       <div className="container table-responsive">
         <h1>TodoList</h1>
@@ -69,11 +53,10 @@ class Table extends Component {
               <th scope="col">Delete</th>
             </tr>
           </thead>
-          <tbody class="no-underline">
+          <tbody className="no-underline">
                 { this.state.list.map ((item, index) =>
                   <ListItem
                       key={index}
-                      finishedChange={this.updateFinished.bind(this)}
                       totalChange={this.updateTotal.bind(this)}
                       item={item}
                   />

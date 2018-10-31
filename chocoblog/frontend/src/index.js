@@ -5,10 +5,10 @@ import './index.css';
 import Table from './Table';
 import Clock from './Timer';
 import About from './About';
+// import Record from './Record';
 import {
 BrowserRouter,
-Route,
-Link
+Route
 } from 'react-router-dom';
 
 // import Record from './Record';
@@ -19,7 +19,7 @@ class SiteRouter extends BrowserRouter {
     return (
         <BrowserRouter>
           <div>
-            <Route exact path="/todo" component={Table}/>
+            <Route exact path="/" component={Table}/>
             <Route path="/about" component={About}/>
           </div>
       </BrowserRouter>
@@ -30,7 +30,7 @@ class SiteRouter extends BrowserRouter {
 
 ReactDOM.render(<SiteRouter />, document.getElementById('site'));
 ReactDOM.render(<Clock />, document.getElementById('timer'));
-
+// ReactDOM.render(<Record />, document.getElementById('record'));
 
 // ReactDOM.render(<Record />, document.getElementById('record'));
 

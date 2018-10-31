@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
 
 class Record extends React.Component {
   constructor(props) {
@@ -13,7 +11,7 @@ class Record extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/todo/1")
+    fetch("http://localhost:8000/api/todo/?format=json")
       .then(res => res.json())
       .then(
         (result) => {
@@ -33,6 +31,10 @@ class Record extends React.Component {
         }
       )
   }
+  componentWillUnmount() {
+  this.serverRequest.abort()
+}
+
 
   render() {
     const { error, isLoaded, items } = this.state;

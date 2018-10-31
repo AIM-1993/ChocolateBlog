@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './table.css';
 class ListItem extends Component {
     constructor (props) {
