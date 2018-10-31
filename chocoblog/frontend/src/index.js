@@ -4,15 +4,31 @@ import './index.css';
 // import './main.css';
 import Table from './Table';
 import Clock from './Timer';
+import {
+BrowserRouter,
+Route,
+Link
+} from 'react-router-dom';
+
 // import Record from './Record';
-import TodoList from './TodoList';
 import * as serviceWorker from './serviceWorker';
 
+class TableRouter extends BrowserRouter {
+  render() {
+    return (
+        <BrowserRouter>
+          <div>
+            <Route exact path="/todo" component={Table}/>
+          </div>
+      </BrowserRouter>
+    );
+  }
+}
 
-// ReactDOM.render(<Clock />, document.getElementById('timer'));
-ReactDOM.render(<Table />, document.getElementById('table'));
-// ReactDOM.render(<Record />, document.getElementById('record'));
-// ReactDOM.render(<TodoList />, document.getElementById('todolist'));
+
+
+ReactDOM.render(<Clock />, document.getElementById('timer'));
+ReactDOM.render(<TableRouter />, document.getElementById('table'));
 // ReactDOM.render(<Record />, document.getElementById('record'));
 
 

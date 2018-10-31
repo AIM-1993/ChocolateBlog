@@ -15,10 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prebuild":"rm -rf ../backend/templates/index.html && rm -rf ../backend/static/build",
-    "build": "react-scripts build",
+    "prebuild": "rm -rf ../backend/templates/index.html && rm -rf ../backend/static/build",
     "postbuild": "mv build/index.html ../backend/templates/ &&  mv build ../backend/"
-
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +27,4 @@
     "not ie <= 11",
     "not op_mini all"
   ]
-
 }

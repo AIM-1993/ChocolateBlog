@@ -5,10 +5,7 @@
 
 .Timer-header {
   background-color: ;
-  font-style: normal;
-  min-height: 5vh;
+  font-style: italic;
   display: inline;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  color: #884b2e;
+  color: #fff;
 }

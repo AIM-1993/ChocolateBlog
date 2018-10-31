@@ -70,7 +70,7 @@ class Table extends Component {
               <th scope="col">Delete</th>
             </tr>
           </thead>
-          <tbody className="no-underline">
+          <tbody class="no-underline">
                 { this.state.list.map ((item, index) =>
                   <ListItem
                       key={index}
@@ -79,6 +79,7 @@ class Table extends Component {
                       item={item}
                   />
                 )}
+
           </tbody>
         </table>
         <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
