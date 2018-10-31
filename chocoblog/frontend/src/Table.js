@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ListItem from './ListItem';
 import Dialog from './dialog';
-import './Table.css';
-import text from './text.json';
+import './table.css';
 
 class Table extends Component {
     constructor (props) {

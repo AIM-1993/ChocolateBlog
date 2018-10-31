@@ -9,7 +9,7 @@ class Dialog extends Component {
 
 	handleClick () {
 		var len = this.props.nums;
-		var newid = len > 0 ? len : 1;
+		var newid = len > 0 ? len : 0;
 		var value = this.refs.myText.value;
 		if (value !== '') {
 			var obj = {

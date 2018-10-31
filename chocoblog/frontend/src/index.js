@@ -4,6 +4,7 @@ import './index.css';
 // import './main.css';
 import Table from './Table';
 import Clock from './Timer';
+import About from './About';
 import {
 BrowserRouter,
 Route,
@@ -13,12 +14,13 @@ Link
 // import Record from './Record';
 import * as serviceWorker from './serviceWorker';
 
-class TableRouter extends BrowserRouter {
+class SiteRouter extends BrowserRouter {
   render() {
     return (
         <BrowserRouter>
           <div>
             <Route exact path="/todo" component={Table}/>
+            <Route path="/about" component={About}/>
           </div>
       </BrowserRouter>
     );
@@ -26,9 +28,10 @@ class TableRouter extends BrowserRouter {
 }
 
 
-
+ReactDOM.render(<SiteRouter />, document.getElementById('site'));
 ReactDOM.render(<Clock />, document.getElementById('timer'));
-ReactDOM.render(<TableRouter />, document.getElementById('table'));
+
+
 // ReactDOM.render(<Record />, document.getElementById('record'));
 
 
