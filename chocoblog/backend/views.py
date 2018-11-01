@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from rest_framework.response import Response
-from backend.serializers import TodoSerializer
-from .models import Todo
+from backend.serializers import TodoSerializer, ArticleSerializer
+from .models import Todo, Article
 
 # Create your views here.
 
@@ -11,3 +9,9 @@ class TodoViewSet(viewsets.ModelViewSet):
 
     queryset = Todo.objects.all().order_by('-pk')
     serializer_class = TodoSerializer
+
+
+class ArticleViewSet(viewsets.ModelViewSet):
+
+    queryset = Article.objects.all().order_by('-pub_date')
+    serializer_class = ArticleSerializer
