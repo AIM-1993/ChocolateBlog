@@ -40,7 +40,7 @@ class Home extends Component {
             <div>
                 {
                     !isLoading ? contacts.map(contact => {
-                        const {id, thing} = contact;
+                        const {id} = contact;
                         return <p>{id}</p>
                     }) : null
                 }    

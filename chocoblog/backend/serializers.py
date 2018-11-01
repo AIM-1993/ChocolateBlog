@@ -11,4 +11,4 @@ class TodoSerializer(serializers.ModelSerializer):
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('id', 'name', 'author', 'pub_date', 'context')
+        fields = ('id', 'title', 'author', 'pub_date', 'context')

@@ -31,9 +31,6 @@ class SiteRouter extends BrowserRouter {
 
 ReactDOM.render(<SiteRouter />, document.getElementById('site'));
 ReactDOM.render(<Clock />, document.getElementById('timer'));
-// ReactDOM.render(<Record />, document.getElementById('record'));
-
-// ReactDOM.render(<Record />, document.getElementById('record'));
 
 
 // If you want your app to work offline and load faster, you can change
