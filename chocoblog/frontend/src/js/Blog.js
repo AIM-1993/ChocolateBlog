@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../scss/blog.css';
+import '../css/blog.css';
 
 class Blog extends Component {
     constructor (props) {
@@ -40,14 +40,16 @@ class Blog extends Component {
                 {
                     !isLoading ? contacts.map(contact => {
                         const {title, author, pub_date, context} = contact;
-                        return(<ul key={pub_date}>
-                                    <li className="fas fa-book-open">{title}</li>
-                                    <li>{author}</li>
-                                    <li>{pub_date}</li>
-                                    <li >{context}</li>
-                                </ul>) 
+                        return(
+                              <div className="list-group">
+                                <ul key={pub_date} className="article">
+                                    <li className="fas fa-book-open list-group-item list-group-item-action flex-column align-items-start activ">  {title}</li>
+                                    <li className="list-group-item list-group-item-action flex-column align-items-start activ">{author} | {pub_date}</li>
+                                    <li className="list-group-item list-group-item-action flex-column align-items-start activ">{context}</li>
+                                </ul>
+                              </div>)
                     }) : null
-                }    
+                }
             </div>
             );
     }

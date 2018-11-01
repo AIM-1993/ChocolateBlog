@@ -5,7 +5,6 @@ import './index.css';
 import Home from './js/Home';
 import Table from './js/Table';
 import Blog from './js/Blog';
-import Clock from './js/Timer';
 import About from './js/About';
 
 import {
@@ -21,7 +20,7 @@ class SiteRouter extends BrowserRouter {
     return (
         <BrowserRouter>
           <div>
-            <Route exact path="/home" component={Home}/>
+            <Route exact path="/" component={Home}/>
             <Route path="/todo" component={Table}/>
             <Route path='/blog' component={Blog}/>
             <Route path="/about" component={About}/>
@@ -31,9 +30,7 @@ class SiteRouter extends BrowserRouter {
   }
 }
 
-
 ReactDOM.render(<SiteRouter />, document.getElementById('site'));
-ReactDOM.render(<Clock />, document.getElementById('timer'));
 
 
 // If you want your app to work offline and load faster, you can change

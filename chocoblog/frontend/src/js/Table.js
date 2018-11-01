@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ListItem from './ListItem';
 import Dialog from './Dialog';
-import '../scss/table.css';
+import Clock from './Clock';
+import '../css/table.css';
 
 class Table extends Component {
     constructor (props) {
@@ -37,8 +38,6 @@ class Table extends Component {
   		});
   }
 
-
-
     //更新任务总数，在组件中以props的形式传递给子组件
     updateTotal (todoItem) {
         var obj = [], sum = 0;
@@ -59,9 +58,10 @@ class Table extends Component {
   render() {
       return (
         <div className="container table-responsive">
-          <h1>TodoList
-            <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
-          </h1>
+          <h1 className="display-4">TodoList</h1>
+            <Clock className="clock"/>
+              <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
+            <hr className="my-4" />
           <table className="table table-hover table-dark">
             <thead className="bg-color">
               <tr>
@@ -82,10 +82,7 @@ class Table extends Component {
 
             </tbody>
           </table>
-          
         </div>
-
-
       );
   }
 }

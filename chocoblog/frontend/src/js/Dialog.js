@@ -26,8 +26,8 @@ class Dialog extends Component {
 		return (
 			<div className="dialog">
 				<div className="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="text" ref="myText" placeholder="你想做点什么"/>
-					<input class="btn btn-outline-success my-2 my-sm-0" type="button" value="保存任务" onClick={this.handleClick}/>
+					<input className="form-control mr-sm-2" type="text" ref="myText" placeholder="添加待办任务"/>
+					<input className="btn btn-outline-info my-2 my-sm-0" type="button" value="保存任务" onClick={this.handleClick}/>
 				</div>
 			</div>
 
