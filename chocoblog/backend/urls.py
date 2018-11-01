@@ -4,8 +4,8 @@ from .import views
 
 
 router = routers.DefaultRouter()
-router.register(r'api/todo', views.TodoViewSet)
-router.register(r'api/article', views.ArticleViewSet)
+router.register(r'api/v1/DataIndex', views.DataIndexViewSet)
+router.register(r'api/v1/article', views.ArticleViewSet)
 
 
 urlpatterns = [

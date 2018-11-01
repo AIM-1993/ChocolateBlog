@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Home from './Home';
 import '../css/blog.css';
 
 class Blog extends Component {
@@ -14,7 +15,7 @@ class Blog extends Component {
     }
 
     fetchData () {
-        fetch("http://localhost:8000/api/article")
+        fetch("http://localhost:8000/api/v1/article")
         .then(response => response.json())
         .then(parsedJSON => parsedJSON.results.map(article => (
             {
@@ -41,6 +42,7 @@ class Blog extends Component {
                     !isLoading ? contacts.map(contact => {
                         const {title, author, pub_date, context} = contact;
                         return(
+                              <Home />,
                               <div className="list-group">
                                 <ul key={pub_date} className="article">
                                     <li className="fas fa-book-open list-group-item list-group-item-action flex-column align-items-start activ">  {title}</li>

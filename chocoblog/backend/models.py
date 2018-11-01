@@ -1,12 +1,15 @@
 from django.db import models
 
 # Create your models here.
-class Todo(models.Model):
-    thing = models.CharField(max_length=50)
-    done = models.BooleanField(default=False)
+class DataIndex(models.Model):
+    count = models.IntegerField(default=0, verbose_name="文章数量")
 
     def __str__(self):
-        return self.thing
+        return f"{self.count}"
+
+    class Meta:
+        verbose_name = "文章存量"
+        verbose_name_plural = verbose_name
 
 class Article(models.Model):
     title = models.CharField(max_length=30, verbose_name="文章名称")
@@ -16,3 +19,7 @@ class Article(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+    class Meta:
+        verbose_name = "文章详情"
+        verbose_name_plural = verbose_name

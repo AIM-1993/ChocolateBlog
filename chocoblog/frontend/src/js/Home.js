@@ -12,16 +12,15 @@ class Home extends Component {
 
     componentDidMount () {
         this.fetchData();
-        
+
     }
 
     fetchData () {
-        fetch("http://localhost:8000/api/todo")
+        fetch("http://localhost:8000/api/v1/DataIndex/")
         .then(response => response.json())
-        .then(parsedJSON => parsedJSON.results.map(thing => (
+        .then(parsedJSON => parsedJSON.results.map(dataindex => (
             {
-                id : `${thing.id}`,
-                thing : `${thing.thing}`
+                count : `${dataindex.count}`
         }
         )))
         .then(contacts => this.setState(
@@ -40,10 +39,10 @@ class Home extends Component {
             <div>
                 {
                     !isLoading ? contacts.map(contact => {
-                        const {id} = contact;
-                        return <p>{id}</p>
+                        const {count} = contact;
+                        return <h3>目前数据库中共有文章： <span className="badge badge-secondary">{count}</span></h3>
                     }) : null
-                }    
+                }
             </div>
         );
     }

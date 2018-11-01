@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Todo, Article
+from .models import DataIndex, Article
 # Register your models here.
-admin.site.register(Todo)
+admin.site.register(DataIndex)
 admin.site.register(Article)

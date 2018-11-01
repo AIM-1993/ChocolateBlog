@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from backend.models import Todo, Article
+from backend.models import DataIndex, Article
 
 
-class TodoSerializer(serializers.ModelSerializer):
+class DataIndexSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Todo
-        fields = ('id', 'thing', 'done')
+        model = DataIndex
+        fields = ('id', 'count')
 
 
 class ArticleSerializer(serializers.ModelSerializer):

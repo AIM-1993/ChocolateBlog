@@ -1,14 +1,14 @@
 from rest_framework import viewsets
-from backend.serializers import TodoSerializer, ArticleSerializer
-from .models import Todo, Article
+from backend.serializers import DataIndexSerializer, ArticleSerializer
+from .models import DataIndex, Article
 
 # Create your views here.
 
 
-class TodoViewSet(viewsets.ModelViewSet):
+class DataIndexViewSet(viewsets.ModelViewSet):
 
-    queryset = Todo.objects.all().order_by('-pk')
-    serializer_class = TodoSerializer
+    queryset = DataIndex.objects.all().order_by('-pk')
+    serializer_class = DataIndexSerializer
 
 
 class ArticleViewSet(viewsets.ModelViewSet):
