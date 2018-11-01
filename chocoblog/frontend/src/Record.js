@@ -12,8 +12,9 @@ class Record extends React.Component {
 
   componentDidMount() {
     fetch("http://localhost:8000/api/todo/?format=json")
-      .then(res => res.json())
-      .then(
+      .then(response => response.json())
+      .then(parsedJSON => console.log(parsedJSON.results))
+      .catch(error => console.log('Failed to parsed.'))
         (result) => {
           this.setState({
             isLoaded: true,

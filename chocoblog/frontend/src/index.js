@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import './main.css';
+import Home from './Home';
 import Table from './Table';
 import Clock from './Timer';
 import About from './About';
-// import Record from './Record';
+
 import {
 BrowserRouter,
 Route
 } from 'react-router-dom';
 
-// import Record from './Record';
 import * as serviceWorker from './serviceWorker';
 
 class SiteRouter extends BrowserRouter {
@@ -19,7 +19,8 @@ class SiteRouter extends BrowserRouter {
     return (
         <BrowserRouter>
           <div>
-            <Route exact path="/" component={Table}/>
+            <Route exact path="/home" component={Home}/>
+            <Route path="/todo" component={Table}/>
             <Route path="/about" component={About}/>
           </div>
       </BrowserRouter>

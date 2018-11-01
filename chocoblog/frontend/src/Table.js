@@ -22,6 +22,21 @@ class Table extends Component {
             list: allTask
         });
     }
+    updateFinished (todoItem) {
+  		var sum = 0;
+  		this.state.list.forEach( (item) => {
+  			if (item.id === todoItem.id) {
+  				item.status = todoItem.status;
+  			}
+  			if (item.status === 1) {
+  				sum++;
+  			}
+  		});
+  		this.setState({
+  			finished: sum
+  		});
+  }
+
 
 
     //更新任务总数，在组件中以props的形式传递给子组件
@@ -42,33 +57,34 @@ class Table extends Component {
     }
 
   render() {
-    return (
-      <div className="container table-responsive">
-        <h1>TodoList</h1>
-        <table className="table table-hover table-dark">
-          <thead className="bg-color">
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Things</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody className="no-underline">
-                { this.state.list.map ((item, index) =>
-                  <ListItem
-                      key={index}
-                      totalChange={this.updateTotal.bind(this)}
-                      item={item}
-                  />
-                )}
+      return (
+        <div className="container table-responsive">
+          <h1>TodoList</h1>
+          <table className="table table-hover table-dark">
+            <thead className="bg-color">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Things</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody className="no-underline">
+                  { this.state.list.map ((item, index) =>
+                    <ListItem
+                        key={index}
+                        finishedChange={this.updateFinished.bind(this)}
+                        totalChange={this.updateTotal.bind(this)}
+                        item={item}
+                    />
+                  )}
 
-          </tbody>
-        </table>
-        <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
-      </div>
+            </tbody>
+          </table>
+          <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
+        </div>
 
 
-  );
+      );
   }
 }
 export default Table;

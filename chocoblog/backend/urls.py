@@ -4,7 +4,7 @@ from .import views
 
 
 router = routers.DefaultRouter()
-router.register(r'/api/todo', views.TodoViewSet)
+router.register(r'api/todo', views.TodoViewSet)
 
 app_name = 'backend'
 urlpatterns = [
