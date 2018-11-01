@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ListItem from './ListItem';
-import Dialog from './dialog';
-import './table.css';
+import Dialog from './Dialog';
+import '../scss/table.css';
 
 class Table extends Component {
     constructor (props) {

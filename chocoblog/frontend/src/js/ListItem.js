@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './table.css';
+import '../scss/table.css';
 class ListItem extends Component {
     constructor (props) {
         super(props);

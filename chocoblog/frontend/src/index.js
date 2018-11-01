@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import './main.css';
-import Home from './Home';
-import Table from './Table';
-import Clock from './Timer';
-import About from './About';
+import Home from './js/Home';
+import Table from './js/Table';
+import Clock from './js/Timer';
+import About from './js/About';
 
 import {
-BrowserRouter,
-Route
-} from 'react-router-dom';
+  BrowserRouter,
+  Route
+  } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
