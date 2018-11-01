@@ -59,7 +59,9 @@ class Table extends Component {
   render() {
       return (
         <div className="container table-responsive">
-          <h1>TodoList</h1>
+          <h1>TodoList
+            <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
+          </h1>
           <table className="table table-hover table-dark">
             <thead className="bg-color">
               <tr>
@@ -80,7 +82,7 @@ class Table extends Component {
 
             </tbody>
           </table>
-          <Dialog addNewTask={this.addTask.bind(this)} nums={this.state.list.length}/>
+          
         </div>
 
 

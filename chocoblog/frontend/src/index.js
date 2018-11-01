@@ -4,6 +4,7 @@ import './index.css';
 // import './main.css';
 import Home from './js/Home';
 import Table from './js/Table';
+import Blog from './js/Blog';
 import Clock from './js/Timer';
 import About from './js/About';
 
@@ -14,6 +15,7 @@ import {
 
 import * as serviceWorker from './serviceWorker';
 
+
 class SiteRouter extends BrowserRouter {
   render() {
     return (
@@ -21,6 +23,7 @@ class SiteRouter extends BrowserRouter {
           <div>
             <Route exact path="/home" component={Home}/>
             <Route path="/todo" component={Table}/>
+            <Route path='/blog' component={Blog}/>
             <Route path="/about" component={About}/>
           </div>
       </BrowserRouter>

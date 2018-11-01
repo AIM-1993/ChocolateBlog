@@ -24,13 +24,10 @@ class Dialog extends Component {
 
 	render () {
 		return (
-
 			<div className="dialog">
-				<div>
-					<input type="text" ref="myText" placeholder="你想做点什么"/>
-				</div>
-				<div>
-					<input type="button" value="保存任务" onClick={this.handleClick}/>
+				<div className="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="text" ref="myText" placeholder="你想做点什么"/>
+					<input class="btn btn-outline-success my-2 my-sm-0" type="button" value="保存任务" onClick={this.handleClick}/>
 				</div>
 			</div>
 
