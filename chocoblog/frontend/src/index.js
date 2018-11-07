@@ -4,6 +4,7 @@ import './index.css';
 // import './main.css';
 import Home from './js/Home';
 import Table from './js/Table';
+import Detail from './js/Detail';
 import Blog from './js/Blog';
 import About from './js/About';
 
@@ -21,6 +22,7 @@ class SiteRouter extends BrowserRouter {
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Home}/>
+            <Route path="/detail" component={Detail}/>
             <Route path="/todo" component={Table}/>
             <Route path='/blog' component={Blog}/>
             <Route path="/about" component={About}/>

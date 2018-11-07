@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from './Home';
+import { NavLink } from 'react-router-dom';
 import '../css/blog.css';
 
 class Blog extends Component {
@@ -45,11 +46,13 @@ class Blog extends Component {
                               <Home />,
                               <div className="list-group">
                                 <ul key={pub_date} className="article">
-                                    <li className="fas fa-book-open list-group-item list-group-item-action flex-column align-items-start activ">  {title}</li>
+                                    <NavLink to="/detail">
+                                        <li className="fas fa-book-open list-group-item list-group-item-action flex-column align-items-start activ">  {title}</li>
+                                    </NavLink>
                                     <li className="list-group-item list-group-item-action flex-column align-items-start activ">{author} | {pub_date}</li>
                                     <li className="list-group-item list-group-item-action flex-column align-items-start activ">{context}</li>
                                 </ul>
-                              </div>)
+                              </div>);
                     }) : null
                 }
             </div>

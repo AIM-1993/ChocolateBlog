@@ -40,7 +40,14 @@ class Home extends Component {
                 {
                     !isLoading ? contacts.map(contact => {
                         const {count} = contact;
-                        return <h3>目前数据库中共有文章： <span className="badge badge-secondary">{count}</span></h3>
+                        return(
+                            <div class="container">
+                                <h1>欢迎使用 ChocolateTodoList！</h1>
+                                <hr className="my-4" />
+                                <h4>目前数据库中共有文章： <span className="badge badge-secondary">{count} </span></h4>
+                                <p>你可以尝试在Blog页面阅读他们。相信我，他们值得一读</p>
+                            </div>
+                        )
                     }) : null
                 }
             </div>
